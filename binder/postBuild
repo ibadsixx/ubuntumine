@@ -27,7 +27,7 @@ ALMOND_VERSION=0.11.1
 
 # Optional: Install almond for Scala 2.11
 SCALA_VERSION=2.11.12
-ALMOND_VERSION=0.6.0
+ALMOND_VERSION=0.10.9
 ./cs bootstrap \
   -r jitpack \
   -i user -I user:sh.almond:scala-kernel-api_$SCALA_VERSION:$ALMOND_VERSION \
