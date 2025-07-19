@@ -27,13 +27,13 @@ ALMOND_VERSION=0.11.1
 
 # Optional: Install almond for Scala 2.11
 SCALA_VERSION=2.11.12
-ALMOND_VERSION=0.10.9
+ALMOND_VERSION=0.6.0
 ./cs bootstrap \
   -r jitpack \
-  -i user -I user:sh.almond:scala-kernel-api_$SCALA_VERSION:$ALMOND_VERSION \
+  -r sonatype:releases \
   sh.almond:scala-kernel_$SCALA_VERSION:$ALMOND_VERSION \
   --sources --default=true \
-  -o almond-scala-2.11 \
+  -o almond-scala-2.11
   </dev/null 2>&1 | grep -v '^Download'
 ./almond-scala-2.11 --install --id scala211 --display-name "Scala (2.11)" \
   --command "java -XX:MaxRAMPercentage=80.0 -jar almond-scala-2.11 --id scala211 --display-name 'Scala (2.11)'" \
